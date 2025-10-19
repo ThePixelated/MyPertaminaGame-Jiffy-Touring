@@ -63,6 +63,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.Signal,
 		C3.Behaviors.Bullet.Acts.SetAngleOfMotion,
 		C3.Behaviors.Bullet.Acts.SetSpeed,
+		C3.Plugins.Particles.Acts.SetInitSpeed,
+		C3.Plugins.Particles.Acts.SetParticleAcc,
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Cnds.Compare,

@@ -1485,6 +1485,10 @@ self.C3_ExpressionFuncs = [
 		() => "System",
 		() => 90,
 		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => (-v0.GetValue());
+		},
+		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(2, 4);
 		},
