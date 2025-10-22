@@ -69,6 +69,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.System.Cnds.Compare,
 		C3.Behaviors.Sin.Acts.SetPeriod,
+		C3.Plugins.Sprite.Exps.AnimationFrameCount,
 		C3.Plugins.Sprite.Cnds.CompareY,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.LocalStorage.Acts.SetItem,
@@ -78,7 +79,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.AJAX.Acts.Post,
 		C3.Plugins.AJAX.Cnds.OnComplete,
 		C3.Plugins.AJAX.Exps.LastStatusCode,
-		C3.Plugins.AJAX.Cnds.OnError
+		C3.Plugins.AJAX.Cnds.OnError,
+		C3.JavaScriptInEvents.E_game_Event66_Act1
 	];
 };
 self.C3_JsPropNameTable = [
@@ -146,6 +148,10 @@ self.C3_JsPropNameTable = [
 	{SmokeL: 0},
 	{SmokeR2: 0},
 	{FastEffect: 0},
+	{Asset4: 0},
+	{Asset5: 0},
+	{Asset6: 0},
+	{Asset7: 0},
 	{Menu: 0},
 	{Bg: 0},
 	{Buttons: 0},
@@ -221,6 +227,10 @@ self.InstanceType = {
 	SmokeL: class extends self.IParticlesInstance {},
 	SmokeR2: class extends self.IParticlesInstance {},
 	FastEffect: class extends self.IParticlesInstance {},
+	Asset4: class extends self.ISpriteInstance {},
+	Asset5: class extends self.ISpriteInstance {},
+	Asset6: class extends self.ISpriteInstance {},
+	Asset7: class extends self.ISpriteInstance {},
 	Menu: class extends self.ISpriteInstance {},
 	Bg: class extends self.ITiledBackgroundInstance {},
 	Buttons: class extends self.ISpriteInstance {}
