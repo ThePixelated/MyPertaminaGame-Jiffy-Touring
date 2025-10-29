@@ -26,8 +26,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetPosToObject,
 		C3.Plugins.LocalStorage.Acts.CheckItemExists,
 		C3.Plugins.System.Exps.choose,
-		C3.Plugins.Text.Cnds.CompareInstanceVar,
+		C3.JavaScriptInEvents.E_game_Event1_Act12,
 		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Text.Cnds.CompareInstanceVar,
 		C3.Plugins.System.Exps.zeropad,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.System.Acts.CreateObject,
@@ -43,8 +44,10 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.LocalStorage.Cnds.OnItemExists,
 		C3.Plugins.LocalStorage.Exps.ItemValue,
 		C3.Plugins.System.Cnds.IsGroupActive,
+		C3.Plugins.System.Cnds.CompareBoolVar,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
 		C3.Behaviors.EightDir.Acts.SimulateControl,
+		C3.Plugins.System.Acts.SetBoolVar,
 		C3.Plugins.System.Acts.Wait,
 		C3.Plugins.Particles.Acts.SetRate,
 		C3.Plugins.System.Cnds.TriggerOnce,
@@ -52,10 +55,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Audio.Acts.SetPlaybackRate,
 		C3.Plugins.System.Exps.random,
 		C3.Plugins.Touch.Cnds.OnTouchEnd,
+		C3.Plugins.Sprite.Cnds.OnDestroyed,
 		C3.Plugins.Sprite.Cnds.OnCollision,
-		C3.Behaviors.Sin.Acts.SetMagnitude,
-		C3.Plugins.Sprite.Acts.SetAnimSpeed,
 		C3.Plugins.Sprite.Acts.Destroy,
+		C3.Behaviors.Sin.Acts.SetEnabled,
+		C3.Plugins.Sprite.Acts.SetAnimSpeed,
 		C3.Plugins.Sprite.Acts.Spawn,
 		C3.Plugins.Sprite.Acts.SetVisible,
 		C3.Behaviors.Flash.Acts.Flash,
@@ -76,11 +80,8 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Cnds.OnSignal,
 		C3.Plugins.AJAX.Acts.SetHeader,
-		C3.Plugins.AJAX.Acts.Post,
-		C3.Plugins.AJAX.Cnds.OnComplete,
-		C3.Plugins.AJAX.Exps.LastStatusCode,
-		C3.Plugins.AJAX.Cnds.OnError,
-		C3.JavaScriptInEvents.E_game_Event66_Act1
+		C3.JavaScriptInEvents.E_game_Event66_Act2,
+		C3.JavaScriptInEvents.E_game_Event70_Act1
 	];
 };
 self.C3_JsPropNameTable = [
@@ -152,6 +153,8 @@ self.C3_JsPropNameTable = [
 	{Asset5: 0},
 	{Asset6: 0},
 	{Asset7: 0},
+	{PIDText: 0},
+	{Text2: 0},
 	{Menu: 0},
 	{Bg: 0},
 	{Buttons: 0},
@@ -165,10 +168,16 @@ self.C3_JsPropNameTable = [
 	{Backgrounds: 0},
 	{SkinSelected: 0},
 	{CarAlive: 0},
-	{User_ID: 0},
-	{Game_ID: 0},
+	{Data: 0},
+	{params: 0},
+	{ID_user: 0},
 	{ID_game: 0},
-	{ID_user: 0}
+	{mobileNumber: 0},
+	{token: 0},
+	{transactionID: 0},
+	{gamemodeID: 0},
+	{isLeftTouchEnable: 0},
+	{isRightTouchEnable: 0}
 ];
 
 self.InstanceType = {
@@ -231,6 +240,8 @@ self.InstanceType = {
 	Asset5: class extends self.ISpriteInstance {},
 	Asset6: class extends self.ISpriteInstance {},
 	Asset7: class extends self.ISpriteInstance {},
+	PIDText: class extends self.ITextInstance {},
+	Text2: class extends self.ITextInstance {},
 	Menu: class extends self.ISpriteInstance {},
 	Bg: class extends self.ITiledBackgroundInstance {},
 	Buttons: class extends self.ISpriteInstance {}
